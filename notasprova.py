@@ -14,7 +14,7 @@ if media < 7:
     print(f"SUA MÉDIA FINAL FOI: {media_final:.1f}")
     
     if media_final < 6:
-        print("DESISTE CARA KKKKKKKKKK MUITO BURRO")
+        print("REPROVADO")
     else:
         print("PARABÉNS, VOCÊ PASSOU!")
 else:
