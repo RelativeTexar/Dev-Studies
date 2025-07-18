@@ -1,0 +1,100 @@
+/* Estilos CSS */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #1c1e21;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#password-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+#password-input:focus {
+    outline: none;
+    border-color: #1877f2;
+}
+
+.strength-meter {
+    height: 5px;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+#strength-bar {
+    height: 100%;
+    width: 0;
+    background-color: #ff4d4f;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+#password-strength-text {
+    text-align: right;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #606770;
+}
+
+#recommendations {
+    margin-top: 20px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#recommendations li {
+    font-size: 14px;
+    color: #606770;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+#recommendations li::before {
+    content: '❌';
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#recommendations li.valid {
+    color: #2b8a3e;
+    text-decoration: line-through;
+}
+
+#recommendations li.valid::before {
+    content: '✅';
+}
