@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Logs - Gabriel de Assis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="certificados.html">Certificados</a>
+            <a href="contato.html">Contato</a>
+            <a href="projetos.html">Projetos</a>
+        </nav>
+        
+        <h1 class="page-title">Analisador de Logs de Servidor</h1>
+        <p class="description" style="max-width: 600px; margin: 0 auto 30px auto;">
+            Faça o upload de um arquivo de log (ex: `access.log`) para analisar os dados. Este projeto demonstra a leitura de arquivos e processamento de dados com JavaScript.
+        </p>
+        
+        <input type="file" id="logFileInput" accept=".log, .txt">
+
+        <div id="dashboard" class="dashboard-container">
+            <div class="dashboard-card"><h3>Total de Requisições</h3><p id="totalRequests">0</p></div>
+            <div class="dashboard-card success"><h3>Sucessos (2xx)</h3><p id="successRequests">0</p></div>
+            <div class="dashboard-card error"><h3>Erros (4xx/5xx)</h3><p id="errorRequests">0</p></div>
+            <div class="dashboard-card security"><h3>Logins Falhos (401)</h3><p id="failedLogins">0</p></div>
+        </div>
+
+        <div id="results">
+            <h2>IPs Únicos que acessaram o sistema:</h2>
+            <ul id="uniqueIps"></ul>
+            <h2>Tabela de Logs</h2>
+            <div class="table-container">
+                <table id="logTable">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>IP</th>
+                            <th>Método</th>
+                            <th>Recurso</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="analisador.js"></script>
+</body>
+</html>
